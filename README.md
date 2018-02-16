@@ -1,2 +1,1 @@
-# portfolio
-Tim Davis' Portfolio
+# My Personal Portfolio
