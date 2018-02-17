@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+html, body, main, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  max-width: 980px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "header"
+    "hero"
+    "footer";
+}
+
+main > * {
+  /* border: 1px solid red; */
+}
+
+header {
+  grid-area: header;
+  height: 75px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "header_title header_buttons";
+  align-items: center;
+}
+
+.header_title {
+  grid-area: header_title;
+}
+
+.header_buttons {
+  grid-area: header_buttons;
+  justify-self: flex-end;
+  font-size: 1.5em;
+}
+
+.header_buttons a {
+  margin-left: 5px;
+}
+
+.header_button_text {
+
+}
+
+section.hero {
+  grid-area: hero;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 75px);
+}
+
+footer {
+  grid-area: footer;
+}
