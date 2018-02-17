@@ -1,17 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
 
-html, body, main, h1, h2, h3, h4, h5, h6, p, a {
-  font-family: 'Nunito', sans-serif;
+html {
   box-sizing: border-box;
+  line-height: 1.15;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+body, main, h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
   padding: 0;
   border: 0;
-  color: #000;
+  color: #222222;
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+a:hover {
+  color: #ff3e3e;
 }
 
 main {
@@ -24,6 +41,7 @@ main {
   grid-template-areas:
     "header"
     "hero"
+    "projects"
     "footer";
 }
 
@@ -47,24 +65,38 @@ header {
 
 .header_buttons {
   grid-area: header_buttons;
-  justify-self: flex-end;
-  font-size: 1.5em;
+  justify-self: end;
+  font-size: 1.75em;
 }
 
 .header_buttons a {
   margin-left: 5px;
 }
 
-.header_button_text {
-
-}
-
 section.hero {
   grid-area: hero;
   display: grid;
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "hero_title"
+    "hero_subtitle";
+  align-content: center;
+  text-align: center;
   height: calc(100vh - 75px);
+}
+
+.hero_title {
+  grid-area: hero_title;
+  font-size: 4em;
+}
+
+.hero_subtitle {
+  grid-area: hero_subtitle;
+}
+
+section.projects {
+  grid-area: projects;
+  text-align: center;
 }
 
 footer {
@@ -75,13 +107,12 @@ footer {
   grid-template-areas:
     "footer_copyright"
     "footer_hosted";
-  align-items: center;
+  align-content: center;
   text-align: center;
 }
 
 .footer_copyright {
   grid-area: footer_copyright;
-  align-self: flex-end;
 }
 
 .footer_hosted {
