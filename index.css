@@ -69,4 +69,21 @@ section.hero {
 
 footer {
   grid-area: footer;
+  height: 75px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "footer_copyright"
+    "footer_hosted";
+  align-items: center;
+  text-align: center;
+}
+
+.footer_copyright {
+  grid-area: footer_copyright;
+  align-self: flex-end;
+}
+
+.footer_hosted {
+  grid-area: footer_hosted;
 }
