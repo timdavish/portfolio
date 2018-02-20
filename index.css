@@ -41,6 +41,7 @@ main {
   grid-template-areas:
     "header"
     "hero"
+    "about"
     "projects"
     "footer";
 }
@@ -73,26 +74,53 @@ section.hero {
   grid-area: hero;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr) 0;
   grid-template-areas:
     "hero_title"
-    "hero_subtitle";
-  align-content: center;
+    "hero_subtitle"
+    "hero_footer";
+  align-content: space-around;
   text-align: center;
   height: calc(100vh - 75px);
 }
 
 .hero_title {
   grid-area: hero_title;
-  font-size: 4em;
+  font-size: 100px;
+  align-self: flex-end;
 }
 
 .hero_subtitle {
   grid-area: hero_subtitle;
+  font-size: 40px;
+}
+
+.hero_footer {
+  grid-area: hero_footer;
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: 1.75em;
+  margin-bottom: 24px;
+
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+section.about {
+  grid-area: about;
+  height: 100vh;
+}
+
+.about_title {
+  font-size: 40px;
 }
 
 section.projects {
   grid-area: projects;
-  text-align: center;
+}
+
+.projects_title {
+  font-size: 40px;
 }
 
 footer {
@@ -117,4 +145,18 @@ footer {
 
 .hidden {
   display: none;
+}
+
+/* @-webkit-keyframes bounce {
+  0%, 66%, 100% { -webkit-transform: scaleY(0.6) }
+  33% { -webkit-transform: scaleY(1.0) }
+} */
+
+@keyframes bounce {
+  0%, 30%, 60%, 100% {
+    transform: translateY(0);
+  }
+  15%, 45% {
+    transform: translateY(5px);
+  }
 }
