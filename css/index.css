@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+body, main, h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #222222;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff3e3e;
+}
+
+main {
+  width: 100%;
+  max-width: 980px;
+  padding: 0 24px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "header"
+    "hero"
+    "about"
+    "projects"
+    "footer";
+}
+
+header {
+  grid-area: header;
+  height: 75px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "header_title header_buttons";
+  align-items: center;
+}
+
+.header_title {
+  grid-area: header_title;
+}
+
+.header_buttons {
+  grid-area: header_buttons;
+  justify-self: end;
+  font-size: 1.75em;
+}
+
+.header_buttons a {
+  margin-left: 5px;
+}
+
+section.hero {
+  grid-area: hero;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr) 0;
+  grid-template-areas:
+    "hero_title"
+    "hero_subtitle"
+    "hero_footer";
+  align-content: space-around;
+  text-align: center;
+  height: calc(100vh - 75px);
+}
+
+.hero_title {
+  grid-area: hero_title;
+  font-size: 100px;
+  align-self: flex-end;
+}
+
+.hero_subtitle {
+  grid-area: hero_subtitle;
+  font-size: 40px;
+}
+
+.hero_footer {
+  grid-area: hero_footer;
+  align-self: flex-end;
+  justify-self: flex-end;
+  font-size: 1.75em;
+  margin-bottom: 24px;
+
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+section.about {
+  grid-area: about;
+  height: 100vh;
+}
+
+.about_title {
+  font-size: 40px;
+}
+
+section.projects {
+  grid-area: projects;
+}
+
+.projects_title {
+  font-size: 40px;
+}
+
+footer {
+  grid-area: footer;
+  height: 75px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "footer_copyright"
+    "footer_hosted";
+  align-content: center;
+  text-align: center;
+}
+
+.footer_copyright {
+  grid-area: footer_copyright;
+}
+
+.footer_hosted {
+  grid-area: footer_hosted;
+}
+
+.hidden {
+  display: none;
+}
+
+/* @-webkit-keyframes bounce {
+  0%, 66%, 100% { -webkit-transform: scaleY(0.6) }
+  33% { -webkit-transform: scaleY(1.0) }
+} */
+
+@keyframes bounce {
+  0%, 30%, 60%, 100% {
+    transform: translateY(0);
+  }
+  15%, 45% {
+    transform: translateY(5px);
+  }
+}

@@ -14,8 +14,8 @@
   border-radius: 50% / 10%;
   margin: auto;
 
-  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  -webkit-animation: load 1.2s infinite ease-in-out;
+  animation: load 1.2s infinite ease-in-out;
 }
 
 .loader .rect2 {
@@ -38,12 +38,12 @@
   animation-delay: -0.8s;
 }
 
-@-webkit-keyframes sk-stretchdelay {
+@-webkit-keyframes load {
   0%, 40%, 100% { -webkit-transform: scaleY(0.6) }
   20% { -webkit-transform: scaleY(1.0) }
 }
 
-@keyframes sk-stretchdelay {
+@keyframes load {
   0%, 40%, 100% {
     transform: scaleY(0.6);
     -webkit-transform: scaleY(0.6);
