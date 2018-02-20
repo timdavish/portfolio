@@ -45,10 +45,6 @@ main {
     "footer";
 }
 
-main > * {
-  /* border: 1px solid red; */
-}
-
 header {
   grid-area: header;
   height: 75px;
