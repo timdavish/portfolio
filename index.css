@@ -118,3 +118,7 @@ footer {
 .footer_hosted {
   grid-area: footer_hosted;
 }
+
+.hidden {
+  display: none;
+}
