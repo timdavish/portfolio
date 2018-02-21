@@ -15,7 +15,8 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-body, main, h1, h2, h3, h4, h5, h6, p, a {
+body, main, section, div, h1, h2, h3, h4, h5, h6, p, a {
+  z-index: 10;
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,14 +29,12 @@ a {
 }
 
 a:hover {
-  color: #ff3e3e;
+  color: #ffffff;
 }
 
 main {
-  width: 100%;
-  max-width: 980px;
-  padding: 0 24px;
-  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-areas:
@@ -44,6 +43,21 @@ main {
     "about"
     "projects"
     "footer";
+  background-color: #DBE2EF;
+
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -ms-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+}
+
+main > section > * {
+  width: 100%;
+  max-width: 980px;
+  padding: 0 24px;
+  margin: 0 auto;
 }
 
 header {
@@ -71,6 +85,7 @@ header {
 }
 
 section.hero {
+  height: calc(100vh - 75px);
   grid-area: hero;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -81,7 +96,6 @@ section.hero {
     "hero_footer";
   align-content: space-around;
   text-align: center;
-  height: calc(100vh - 75px);
 }
 
 .hero_title {
@@ -101,14 +115,28 @@ section.hero {
   justify-self: flex-end;
   font-size: 1.75em;
   margin-bottom: 24px;
+  transition: all 0.3s ease;
 
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
 
+.hero_background_part {
+  z-index: 2;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale3d(0, 0, 0);
+  transition: transform 20s linear;
+}
+
+.bottom {
+  background-color: #fff;
+}
+
 section.about {
   grid-area: about;
   height: 100vh;
+  margin-top: 24px;
 }
 
 .about_title {
@@ -147,10 +175,9 @@ footer {
   display: none;
 }
 
-/* @-webkit-keyframes bounce {
-  0%, 66%, 100% { -webkit-transform: scaleY(0.6) }
-  33% { -webkit-transform: scaleY(1.0) }
-} */
+.loaded {
+  opacity: 1;
+}
 
 @keyframes bounce {
   0%, 30%, 60%, 100% {

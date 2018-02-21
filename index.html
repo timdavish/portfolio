@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ff3e3e">
+    <meta name="theme-color" content="#ff3e3e" />
 
-    <meta name="author" content="Tim Davis">
-    <meta name="description" content="Tim Davis' personal website | Full-Stack Developer">
+    <meta name="author" content="Tim Davis" />
+    <meta name="description" content="Tim Davis' personal website | Full-Stack Developer" />
 
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Tim Davis">
-    <meta property="og:description" content="Tim Davis' personal website | Full-Stack Developer">
-    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tim Davis" />
+    <meta name="twitter:description" content="Tim Davis' personal website | Full-Stack Developer" />
+    <meta name="twitter:image" content="" />
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Tim Davis">
-    <meta name="twitter:description" content="Tim Davis' personal website | Full-Stack Developer">
-    <meta name="twitter:image" content="">
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tim Davis" />
+    <meta property="og:description" content="Tim Davis' personal website | Full-Stack Developer" />
+    <meta property="og:image" content="" />
 
     <title>Tim Davis</title>
 
@@ -27,7 +27,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
-    <section class="hidden loader">
+    <section class="loader">
       <div class="rect1"></div>
       <div class="rect2"></div>
       <div class="rect3"></div>
@@ -35,55 +35,60 @@
       <div class="rect5"></div>
     </section>
 
-    <main class="hidden">
-      <header>
-        <h2 class="header_title">
-          <a href="">Tim Davis</a>
-        </h2>
-        <section class="header_buttons">
-          <a href="https://github.com/timdavish">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/timdavish">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://facebook.com/timdavishh">
-            <i class="fab fa-facebook"></i>
-          </a>
-        </section>
-      </header>
-
-      <section class="hero">
-          <h1 class="hero_title">Tim Davis</h1>
-          <h2 class="hero_subtitle">Full-Stack Developer</h2>
-
-          <section class="hero_footer">
-            <a href="#about">
-              <i class="fas fa-arrow-down"></i>
+    <main class="hidden" id="main">
+      <section class="top">
+        <header>
+          <h2 class="header_title">
+            <a href="#main">Tim Davis</a>
+          </h2>
+          <section class="header_buttons">
+            <a href="https://github.com/timdavish">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/timdavish">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://facebook.com/timdavishh">
+              <i class="fab fa-facebook"></i>
             </a>
           </section>
-      </section>
+        </header>
 
-      <section class="about" id="about">
-        <h1 class="about_title">About Me</h1>
-      </section>
+        <section class="hero">
+            <h1 class="hero_title">Tim Davis</h1>
+            <h2 class="hero_subtitle">Full-Stack Developer</h2>
 
-      <section class="projects">
-        <h1 class="projects_title">Projects</h1>
-        <section class="projects_list">Project 1</section>
-        <section class="projects_list">Project 2</section>
-      </section>
-
-      <footer>
-        <section class="footer_copyright">
-          <p>© 2018 Tim Davis</p>
+            <section class="hero_footer">
+              <a href="#about">
+                <i class="fas fa-arrow-down"></i>
+              </a>
+            </section>
         </section>
-        <section class="footer_hosted">
-          <p>This webpage is hosted in Github Pages with the code available on <a href="https://github.com/timdavish/portfolio">Github</a></p>
+      </section>
+
+      <section class="bottom">
+        <section class="about" id="about">
+          <h1 class="about_title">About Me</h1>
         </section>
-      </footer>
+
+        <section class="projects">
+          <h1 class="projects_title">Projects</h1>
+          <section class="projects_list">Project 1</section>
+          <section class="projects_list">Project 2</section>
+        </section>
+
+        <footer>
+          <section class="footer_copyright">
+            <p>© 2018 Tim Davis</p>
+          </section>
+          <section class="footer_hosted">
+            <p>This webpage is hosted in Github Pages with the code available on <a href="https://github.com/timdavish/portfolio">Github</a></p>
+          </section>
+        </footer>
+      </section>
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
