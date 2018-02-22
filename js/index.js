@@ -38,6 +38,7 @@ function animateHero () {
   const id = (uniqueId--).toString(16)
   const moveX = getRandom(0, viewportWidth)
   const moveY = getRandom(0, viewportHeight)
+  const scale = .7
 
   heroBackgroundParts.push(id)
   $('main').append(`<div class="hero_background_part" id="${id}"></div>`)
@@ -48,10 +49,12 @@ function animateHero () {
 
   setTimeout(() => {
     $(`#${id}`).css({
-      left: `${moveX / 2}px`,
-      top: `${moveY / 2}px`,
-      width: viewportHeight,
-      height: viewportHeight,
+      left: `${moveX * scale}px`,
+      top: `${moveY * scale}px`,
+      width: viewportWidth,
+      height: viewportWidth,
+      'max-width': viewportWidth * 2,
+      'max-height': viewportWidth * 2,
       transform: `scale3d(3, 3, 3)`,
       'background-color': colorArray[colorIndex]
     })

@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  color: #aaaaaa;
 }
 
 main {
@@ -129,13 +129,13 @@ section.hero {
   transition: transform 20s linear;
 }
 
-.bottom {
-  background-color: #fff;
+.next {
+  background-color: #f7f7f8;
 }
 
 section.about {
   grid-area: about;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 24px;
 }
 
@@ -145,6 +145,8 @@ section.about {
 
 section.projects {
   grid-area: projects;
+  min-height: 100vh;
+  margin-top: 24px;
 }
 
 .projects_title {
