@@ -14,7 +14,7 @@ const colorArray = [
 let lastColorIndex = 0
 let uniqueId = Number.MAX_SAFE_INTEGER
 
-if (browserSupportsCSSProperty('animations')) {
+if (browserSupportsCSSProperty('animation')) {
   // Show the loader for a random amount of time
   const randomTime = (1 + Math.random()) * 1000
   setTimeout(loadPage, randomTime)
